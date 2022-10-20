@@ -4,6 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        matrixFeladat();
+    }
+
+    private static void matrixFeladat() {
         Matrix m1 = new Matrix(5,7);
         System.out.println(m1);
         System.out.println();
