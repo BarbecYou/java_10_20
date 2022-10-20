@@ -9,5 +9,6 @@ public class Main {
         System.out.println();
         Matrix m2 = new Matrix(3,3);
         System.out.println(m2);
+        System.out.println(m2.getElemekOsszege());
     }
 }

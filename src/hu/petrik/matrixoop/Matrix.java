@@ -22,6 +22,16 @@ public class Matrix {
         }
     }
 
+    public int getElemekOsszege() {
+        int osszeg = 0;
+        for (int[] sor : this.m){
+            for (int elem : sor) {
+                osszeg += elem;
+            }
+        }
+        return osszeg;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
