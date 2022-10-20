@@ -13,5 +13,6 @@ public class Main {
         System.out.println(m2.getElemekOsszege());
         System.out.println(m2.getPozitivElemekSzama());
         System.out.println(m2.getLegnagyobbElem());
+        System.out.println(m2.getElsoPozitivIndex()[0] + " " + m2.getElsoPozitivIndex()[1]);
     }
 }

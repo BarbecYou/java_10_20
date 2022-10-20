@@ -56,16 +56,22 @@ public class Matrix {
         return legnagyobb;
     }
 
-    public int getElsoPozitivIndex() {
+    public int[] getElsoPozitivIndex() {
         int sorIndex = 0;
         int oszlopIndex = 0;
         while (sorIndex < this.m.length && this.m[sorIndex][oszlopIndex] < 1){
             while (oszlopIndex < this.m[sorIndex].length && this.m[sorIndex][oszlopIndex] < 1){
                 oszlopIndex++;
             }
-            sorIndex++;
+            if (oszlopIndex == this.m[sorIndex].length){
+                sorIndex++;
+                oszlopIndex = 0;
+            }
         }
-        return this.m[sorIndex][oszlopIndex];
+        if (sorIndex == this.m.length){
+            return new int[] {-1, -1};
+        }
+        return new int[] {sorIndex, oszlopIndex};
     }
 
     @Override
