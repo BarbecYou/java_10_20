@@ -17,7 +17,7 @@ public class Matrix {
 
         for (int i = 0; i < this.m.length; i++) {
             for (int j = 0; j < this.m[i].length; j++) {
-                this.m[i][j] = rnd.nextInt(1000);
+                this.m[i][j] = rnd.nextInt(150)-50;
             }
         }
     }
@@ -30,6 +30,30 @@ public class Matrix {
             }
         }
         return osszeg;
+    }
+
+    public int getPozitivElemekSzama(){
+        int darabSzam = 0;
+        for (int[] sor : this.m){
+            for (int elem : sor){
+                if (elem > 0){
+                    darabSzam++;
+                }
+            }
+        }
+        return darabSzam;
+    }
+
+    public int getLegnagyobbElem(){
+        int legnagyobb = 0;
+        for (int[] sor : this.m){
+            for (int elem : sor) {
+                if (elem > legnagyobb){
+                    legnagyobb = elem;
+                }
+            }
+        }
+        return legnagyobb;
     }
 
     @Override
